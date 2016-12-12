@@ -143,7 +143,7 @@ public class GeoFeature {
 
 	/**
 	 * Returns direction of travel at the start of the geographic feature.
-	 * 
+	 * if the first firstSegment.p1.equals(firstSegment.p2) the method will return 0.
 	 * @return direction (in standard heading) of travel at the start of the
 	 *         geographic feature, in degrees.
 	 */
@@ -154,7 +154,7 @@ public class GeoFeature {
 
 	/**
 	 * Returns direction of travel at the end of the geographic feature.
-	 * 
+	 * if the lastSegment.p1.equals(lastSegment.p2) the method will return 0.
 	 * @return direction (in standard heading) of travel at the end of the
 	 *         geographic feature, in degrees.
 	 */

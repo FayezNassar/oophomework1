@@ -78,9 +78,9 @@ public abstract class RouteFormatter {
         double angelBetween = Math.min(angelsDiff, 360 - angelsDiff);
         String direction = "";
         if (origHeading <= 180) {
-            direction = newHeading <= origHeading + 180 ? "right" : "left";
+            direction = newHeading <= origHeading + 180 && newHeading >= origHeading ? "right" : "left";
         } else {
-            direction = newHeading <= origHeading ? "left" : "right";
+            direction = newHeading >= origHeading - 180 && newHeading <= origHeading ? "left" : "right";
         }
         if (angelBetween < 10) {
             s = "Continue";
